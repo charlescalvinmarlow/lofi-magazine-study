@@ -1,7 +1,49 @@
-body {
-    background-color: rgb(233, 254, 179);
+:root {
+    --pad: 0.5rem;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+header {
+    padding: 0.5rem 0;
+}
+
+body {
+    background-color: rgb(233, 254, 179);
+    padding: 20px;
+}
+
+#main {
+    border-top: solid 2px;
+    padding-top: var(--pad);
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 2.5rem;
+    line-height: 1.0;
+}
+
+.subtitle {
+    font-size: 1rem;
+    line-height: 1.2;
+
+}
+
+/* links styling */
+
+a:hover {
+    color: gray;
+}
+
+/* battery background css */
 #batteryVisual {
     position: absolute;
     top: 0;
@@ -18,4 +60,30 @@ body {
 #batteryIcon {
     float:right;
     border-top: solid 1px #000;
+}
+
+/* nav styling */
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+}
+
+ul li::before {
+      content: " | "; }
+ul li:first-child::before, nav#menu > ul li:last-child::before {
+      content: ""; }
+
+[data-nav="low-tech-solutions"] {
+    color: #162dab;
+}
+
+[data-nav="high-tech-problems"] {
+    color: #d11305;
+}
+
+[data-nav="obsolete-technology"] {
+    color: #006951;
 }

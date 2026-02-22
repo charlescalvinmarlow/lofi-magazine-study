@@ -12,21 +12,56 @@
         <div id="batteryBackground" style="height: 50%;"></div>
         <div id="batteryIcon">🔋 <span class="battery_value"></span>%</div>
     </div>
-    <div id="controls">
-        <label for="battery_percent">Battery:</label>
-        <input type="range" class="slider" id="battery_percent" min="1" max="100" value="33">
-        <span class="battery_value"></span>
-        <div>
-            <p>Time: <span id="timezone"></span></p>
+    <header>
+        <h1><a>LOW←TECH MAGAZINE</a></h1>
+        <div class="subtitle">
+            <p><a>This is a solar-powered website, which means it sometimes goes offline</a></p>
         </div>
-        <div id="weather">
-            <p><span id="localTemp"></span></p>
-            <p><span id="localWeather"></span></p>
-        </div>
-    </div>
+        <nav>
+            <ul>
+                <li>
+                    <a>About</a>
+                </li>
+                <li>
+                    <a data-nav="low-tech-solutions">Low-Tech Solutions</a>
+                </li>
+                <li>
+                    <a data-nav="high-tech-problems">High-tech Problems</a>
+                </li>
+                <li>
+                    <a data-nav="obsolete-technology">Obsolete Technology</a>
+                </li>
+                <li>
+                    <a>Offline Reading</a>
+                </li>
+                <li>
+                    <a>Archive</a>
+                </li>
+                <li>
+                    <a>Donate</a>
+                </li>
+                <li>
+                    <a>NTM</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </header>
 
     <div id="main">
-        
+        <div id="controls">
+            <label for="battery_percent">Battery:</label>
+            <input type="range" class="slider" id="battery_percent" min="1" max="100" value="33">
+            <span class="battery_value"></span>
+            <div>
+                <p>Time: <span id="timezone"></span></p>
+            </div>
+            <div id="weather">
+                <p>Live Sydney weather data sourced from <a href="https://open-meteo.com/">Open-Meteo</a></p>
+                <p><span id="localTemp"></span></p>
+                <p><span id="localWeather"></span></p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
