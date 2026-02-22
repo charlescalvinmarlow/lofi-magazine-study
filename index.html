@@ -50,9 +50,15 @@
 
     <div id="main">
         <div id="controls">
-            <label for="battery_percent">Battery:</label>
-            <input type="range" class="slider" id="battery_percent" min="1" max="100" value="33">
-            <span class="battery_value"></span>
+            <div id="battery">
+                <label for="battery_percent">Battery Level:</label>
+                <input type="range" class="slider" id="battery_percent" min="1" max="100" value="33">
+                <span class="battery_value"></span>
+            </div>
+            <div>
+                <label for="chargingCheck">Charging:</label>
+                <input type="checkbox" id="chargingCheck">
+            </div>
             <div>
                 <p>Time: <span id="timezone"></span></p>
             </div>

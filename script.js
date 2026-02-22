@@ -5,10 +5,6 @@ const timezone = document.getElementById("timezone")
 
 batteryValueDisplay.textContent = batteryRangeSlider.value;
 
-// batteryRangeSlider.oninput = function() {
-//     batteryValueDisplay.innerHTML = this.value;
-//     document.getElementById('batteryBackground').style.height = (100-this.value) + '%';
-// };
 
 function setBatteryLevel() {
     batteryValueDisplay.innerHTML = batteryRangeSlider.value;
@@ -17,6 +13,19 @@ function setBatteryLevel() {
 
 setBatteryLevel();
 batteryRangeSlider.oninput = setBatteryLevel;
+
+//charging checkbox check
+const chargingCheckbox = document.getElementById("chargingCheck")
+const batteryIcon = document.getElementById("batteryIcon")
+
+chargingCheckbox.addEventListener("change", () => {
+    if (chargingCheckbox.checked) {
+        batteryIcon.innerHTML = "☀️";
+    }
+    else {
+        batteryIcon.innerHTML = "🔋 " + batteryRangeSlider.value + "%"
+    }
+});
 
 //get local time (based on user's system clock)
 function updateClock() {
