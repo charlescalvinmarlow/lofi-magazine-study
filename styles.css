@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(233, 254, 179);
+}
+
+#batteryVisual {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#batteryBackground {
+    background-color: white;
+}
+
+#batteryIcon {
+    float:right;
+    border-top: solid 1px #000;
+}

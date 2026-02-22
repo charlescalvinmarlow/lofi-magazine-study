@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="batteryVisual">
+        <div id="batteryBackground" style="height: 50%;"></div>
+        <div id="batteryIcon">🔋 <span class="battery_value"></span>%</div>
+    </div>
+    <div id="controls">
+        <label for="battery_percent">Battery:</label>
+        <input type="range" class="slider" id="battery_percent" min="1" max="100" value="33">
+        <span class="battery_value"></span>
+        <div>
+            <p>Time: <span id="timezone"></span></p>
+        </div>
+        <div id="weather">
+            <p><span id="localTemp"></span></p>
+            <p><span id="localWeather"></span></p>
+        </div>
+    </div>
+
+    <div id="main">
+        
+    </div>
+</body>
+</html>
