@@ -88,6 +88,23 @@ ul li:first-child::before, nav#menu > ul li:last-child::before {
     color: #006951;
 }
 
+/* grid styling */
+#cover {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+#featuredImage {
+    height: 500px;
+    overflow: hidden;
+    background-image: url(images/1.png);
+    background-size: cover;
+    grid-column-start: 2;
+    grid-column-end: -1;
+    mix-blend-mode: multiply;
+}
+
 /* footer styling */
 #page-size {
     position: fixed;
