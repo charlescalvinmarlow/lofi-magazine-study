@@ -1,12 +1,13 @@
 const batteryRangeSlider = document.querySelector("#battery_percent");
-const batteryValueDisplay = document.querySelector(".battery_value");
 
 const timezone = document.getElementById("timezone")
 
-batteryValueDisplay.textContent = batteryRangeSlider.value;
+
 
 
 function setBatteryLevel() {
+    const batteryValueDisplay = document.querySelector(".battery_value");
+    batteryValueDisplay.textContent = batteryRangeSlider.value;
     batteryValueDisplay.innerHTML = batteryRangeSlider.value;
     document.getElementById('batteryBackground').style.height = (100-batteryRangeSlider.value) + '%';
 };
@@ -23,9 +24,12 @@ chargingCheckbox.addEventListener("change", () => {
         batteryIcon.innerHTML = "☀️";
     }
     else {
-        batteryIcon.innerHTML = "🔋 " + batteryRangeSlider.value + "%"
+        batteryIcon.innerHTML = '🔋 <span class="battery_value">' + batteryRangeSlider.value + '</span>%';
+        batteryRangeSlider.oninput = setBatteryLevel;
     }
 });
+
+batteryRangeSlider.oninput = setBatteryLevel;
 
 //get local time (based on user's system clock)
 function updateClock() {
