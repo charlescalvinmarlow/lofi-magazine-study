@@ -87,3 +87,11 @@ ul li:first-child::before, nav#menu > ul li:last-child::before {
 [data-nav="obsolete-technology"] {
     color: #006951;
 }
+
+/* footer styling */
+#page-size {
+    position: fixed;
+    bottom: 5px;
+    font-size: 0.7rem;
+    font-family: monospace;
+}
